@@ -1,0 +1,134 @@
+<html>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/apply.css">
+<link rel="stylesheet" href="css/all.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="script.js"></script>
+<script src="https://kit.fontawesome.com/0dfdec2c7e.js"></script>
+
+<div class="logo">KEJ RP</div>
+<img class="backguy" style="bottom: 0vw; left: 67vw; top: unset;" src="img/pic3.png">
+
+<ul class="menu">
+    <li class="menuitem" onclick="openLink('start')">Ana Sayfa</li>
+    <li class="menuitem" onclick="openLink('about')">Hakkımızda</li>
+    <li class="menuitem" onclick="openLink('rules')">Sunucu Kuralları</li>
+    <li class="menuitem" onclick="openLink('whitelist')">Whitelist</li>
+    <li class="menuitem" onclick="openLink('apply')" style="border-color: #3ca918">Başvur</li>
+    <li class="menuitem" onclick="openLink('contact')">Bize Mesaj Gönder</li>
+<li class="menuitem" onclick="openLink('staff')">Staff</li>
+    <li class="menuitem" onclick="openLink('imprint')">Paket Satın Al</li>
+</ul>
+
+<div class="maintext">
+
+    <form method="post" action="php/apply.php" enctype='multipart/form-data'>
+
+        <p>İsim Soyİsim & Discord Adın*</p>
+        <p><input type="text" name="username" required></p>
+
+        <p>Rank*</p>
+        <p>
+            <select name="subject" onclick="selectRang(this.value)" required>
+                <option value="Developer">Developer</option>
+                <option value="Supporter">Destek</option>
+                <option value="Concept">KEJ Admin</option>
+                <option value="others">Üst Yönetim</option>
+            </select>
+        </p>
+
+        <p>E-Mail-Adress*</p>
+        <p><input type="email" name="email" required></p>
+
+        <p>Bize Hakkında Bilgi Ver*</p>
+        <p><textarea name="body" required></textarea ></p >
+    
+        <p>Sadece .PNG .JPG .JPEG .PDF .PSD .ETC</p>
+        <p><input type="file" class="input-file" name="data"></p>
+
+        <p >
+        <input type="submit" name="submit" value="Nachricht abschicken" >
+        </p >
+
+        <div class="dev">
+                <p>Hangi Progam Dillerini Biliyorsun?</p>
+                <p><input type="text" name="dev-scriptsprache"></p >
+
+                <p>Daha Önce Paket Yaptınmı?</p>
+                <p><input type="text" name="dev-vorstellung"></p >
+
+                <p>Kaç Yıldır Yapiyorsun?</p>
+                <p><input type="text" name="dev-since"></p >
+
+                <p>IC İsim Soyİsim?</p>
+                <p><input type="text" name="dev-network"></p >
+
+                <p>Neden KEJ RP?</p>
+                <p><input type="text" name="dev-time"></p >
+        </div>
+
+        <div class="sup" style="display: none;">
+                <p>Neden Destek Olmak İstiyorsun?</p>
+                <p><input type="text" name="sup-aufgabe"></p >
+
+                <p>Daha önce başka sunucuda destek oldunmu?</p>
+                <p><input type="text" name="sup-start"></p >
+
+                <p>Sunucumuzda Destek Olursan Başka Sunucuda Oynuyamazsın Kabul?</p>
+                <p><input type="text" name="sup-begriff"></p >
+
+                <p>Hangi Alanda Destek Olmak İstiyorsun</p>
+                <p><input type="text" name="sup-time"></p >
+
+                <p>Fivem Saatiniz</p>
+                <p><input type="text" name="sup-right"></p >
+
+                <p>Neden KEJ RP</p>
+                <p><input type="text" name="sup-online"></p >
+        </div>
+
+        <div class="kon" style="display: none;">
+                <p>Neden Admin Olmak İstiyorsun?</p>
+                <p><input type="text" name="kon-tools"></p >
+
+                <p>Sunucumuzda Ne kadar süredir varsın?</p>
+                <p><input type="text" name="kon-fertig"></p >
+
+                <p>Fivem Bilginiz?</p>
+                <p><input type="text" name="kon-worauf"></p >
+
+                <p>GÜnlük Kaç Saat Aktifsin?</p>
+                <p><input type="text" name="kon-limit"></p >
+
+                <p>Komut Hakimligi?</p>
+                <p><input type="text" name="kon-setting"></p >
+
+                <p>Neden KEJ RP?</p>
+                <p><input type="text" name="kon-online"></p >
+        </div>
+
+        <div class="son" style="display: none;">
+                <p>İstedin Üst Yönetim rankı?</p>
+                <p><input type="text" name="son-beschreibung"></p >
+
+                <p>Neden Üst Yönetim Olmak İstiyorsun?</p>
+                <p><input type="text" name="son-aufgaben"></p >
+
+                <p>Sunucumuzda Ne kadar süredir varsın?</p>
+                <p><input type="text" name="son-erfahrung"></p >
+
+                <p>Şuan Hangi roldesiniz?</p>
+                <p><input type="text" name="son-time"></p >
+
+                <p>Üst Yönetim olmanıın katkısı ne olcak??</p>
+                <p><input type="text" name="son-setting"></p >
+
+                <p>Neden KEJ RP?</p>
+                <p><input type="text" name="son-online"></p >
+        </div>
+    
+    </form >
+    
+</div>
+</html>
+<!--Copyright (c) 2020 TechKings.de-->
